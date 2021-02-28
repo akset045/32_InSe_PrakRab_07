@@ -34,7 +34,7 @@ namespace PrakRab_07
 
                 string key = textBoxEncodeKeyWord.Text;
 
-                StreamReader sr = new StreamReader(@"C:\Users\Akset\Downloads\PrakRab_07\PrakRab_07\Resources\TextFile1.txt.txt");
+                StreamReader sr = new StreamReader(@"C:\Users\Akset\Downloads\PrakRab_07\PrakRab_07\Resources\TextFile1.txt");
 
                 while (!sr.EndOfStream)
                 {
