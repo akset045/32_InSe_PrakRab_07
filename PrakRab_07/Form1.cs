@@ -61,7 +61,7 @@ namespace PrakRab_07
 
                 key = KeyToPrevRound(key);
                 
-                textBoxDecodeKeyWord.Text = StringFromBinaryToNormalFormat(key);
+                textBox2.Text = StringFromBinaryToNormalFormat(key);
                 
                 string result = "";
 
@@ -80,7 +80,50 @@ namespace PrakRab_07
 
         private void button2_Click(object sender, EventArgs e)
         {
+            if (textBox2.Text.Length > 0)
+            {
+                string s = "";
 
+                string key = StringToBinaryFormat(textBox2.Text);
+
+                StreamReader sr = new StreamReader("out1.txt");
+
+                while (!sr.EndOfStream)
+                {
+                    s += sr.ReadLine();
+                }
+
+                sr.Close();
+
+                s = StringToBinaryFormat(s);
+
+                CutBinaryStringIntoBlocks(s);
+
+                for (int j = 0; j < quantityOfRounds; j++)
+                {
+                    for (int i = 0; i < Blocks.Length; i++)
+                        Blocks[i] = DecodeDES_One_Round(Blocks[i], key);
+
+                    key = KeyToPrevRound(key);
+                }
+
+                key = KeyToNextRound(key);
+
+                textBoxEncodeKeyWord.Text = StringFromBinaryToNormalFormat(key);
+
+                string result = "";
+
+                for (int i = 0; i < Blocks.Length; i++)
+                    result += Blocks[i];
+
+                StreamWriter sw = new StreamWriter("out2.txt");
+                sw.WriteLine(StringFromBinaryToNormalFormat(result));
+                sw.Close();
+
+                Process.Start("out2.txt");
+            }
+            else
+                MessageBox.Show("Введите ключевое слово!");
         }
 
         private string StringToRightLength(string input)
@@ -219,6 +262,7 @@ namespace PrakRab_07
 
                 output += ((char)a).ToString();
             }
+
             return output;
         }
     }
