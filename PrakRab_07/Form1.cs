@@ -72,7 +72,7 @@ namespace PrakRab_07
                 for (int i = 0; i < Blocks.Length; i++)
                         result += Blocks[i];
 
-                StreamWriter sw = new StreamWriter(Resources.TextFile2 );
+                StreamWriter sw = new StreamWriter("Resources.TextFile2");
                 sw.WriteLine(StringFromBinaryToNormalFormat(result));
                 sw.Close();
 
