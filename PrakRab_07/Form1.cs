@@ -34,7 +34,7 @@ namespace PrakRab_07
 
                 string key = textBoxEncodeKeyWord.Text;
 
-                StreamReader sr = new StreamReader("in.txt");
+                StreamReader sr = new StreamReader(@"C:\Users\Akset\Downloads\PrakRab_07\PrakRab_07\Resources\TextFile1.txt.txt");
 
                 while (!sr.EndOfStream)
                 {
@@ -68,11 +68,11 @@ namespace PrakRab_07
                 for (int i = 0; i < Blocks.Length; i++)
                         result += Blocks[i];
 
-                StreamWriter sw = new StreamWriter("out1.txt");
+                StreamWriter sw = new StreamWriter(@"C:\Users\Akset\Downloads\PrakRab_07\PrakRab_07\Resources\TextFile2.txt");
                 sw.WriteLine(StringFromBinaryToNormalFormat(result));
                 sw.Close();
 
-                Process.Start("out1.txt");
+                Process.Start(@"C:\Users\Akset\Downloads\PrakRab_07\PrakRab_07\Resources\TextFile2.txt");
             }
             else
                 MessageBox.Show("Введите ключевое слово!");
@@ -86,7 +86,7 @@ namespace PrakRab_07
 
                 string key = StringToBinaryFormat(textBox2.Text);
 
-                StreamReader sr = new StreamReader("out1.txt");
+                StreamReader sr = new StreamReader(@"C:\Users\Akset\Downloads\PrakRab_07\PrakRab_07\Resources\TextFile2.txt");
 
                 while (!sr.EndOfStream)
                 {
@@ -116,11 +116,11 @@ namespace PrakRab_07
                 for (int i = 0; i < Blocks.Length; i++)
                     result += Blocks[i];
 
-                StreamWriter sw = new StreamWriter("out2.txt");
+                StreamWriter sw = new StreamWriter(@"C:\Users\Akset\Downloads\PrakRab_07\PrakRab_07\Resources\TextFile3.txt");
                 sw.WriteLine(StringFromBinaryToNormalFormat(result));
                 sw.Close();
 
-                Process.Start("out2.txt");
+                Process.Start(@"C:\Users\Akset\Downloads\PrakRab_07\PrakRab_07\Resources\TextFile3.txt");
             }
             else
                 MessageBox.Show("Введите ключевое слово!");

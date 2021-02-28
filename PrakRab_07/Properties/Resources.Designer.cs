@@ -59,5 +59,33 @@ namespace PrakRab_07.Properties {
                 resourceCulture = value;
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Aksenov.
+        /// </summary>
+        internal static string TextFile1 {
+            get {
+                return ResourceManager.GetString("TextFile1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to 켮㲥콰w콙
+        ///.
+        /// </summary>
+        internal static string TextFile2 {
+            get {
+                return ResourceManager.GetString("TextFile2", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to akse ffggh .
+        /// </summary>
+        internal static string TextFile3 {
+            get {
+                return ResourceManager.GetString("TextFile3", resourceCulture);
+            }
+        }
     }
 }
