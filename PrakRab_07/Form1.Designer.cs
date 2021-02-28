@@ -31,7 +31,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBoxEncodeKeyWord = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
@@ -70,13 +70,13 @@
             this.label1.TabIndex = 3;
             this.label1.Text = "Ключевое слово:";
             // 
-            // textBoxEncodeKeyWord
+            // textBox1
             // 
-            this.textBoxEncodeKeyWord.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
-            this.textBoxEncodeKeyWord.Location = new System.Drawing.Point(41, 76);
-            this.textBoxEncodeKeyWord.Name = "textBoxEncodeKeyWord";
-            this.textBoxEncodeKeyWord.Size = new System.Drawing.Size(151, 27);
-            this.textBoxEncodeKeyWord.TabIndex = 4;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13F);
+            this.textBox1.Location = new System.Drawing.Point(41, 76);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(151, 27);
+            this.textBox1.TabIndex = 4;
             // 
             // label2
             // 
@@ -103,7 +103,7 @@
             this.ClientSize = new System.Drawing.Size(482, 245);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBoxEncodeKeyWord);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
@@ -119,7 +119,7 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBoxEncodeKeyWord;
+        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBox2;
     }

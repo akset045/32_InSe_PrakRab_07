@@ -5,6 +5,7 @@ using System.Data;
 using System.Diagnostics;
 using System.Drawing;
 using System.IO;
+using System.Reflection;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,7 +20,9 @@ namespace PrakRab_07
         private const int shiftKey = 2;
         private const int quantityOfRounds = 16;
 
-        string[] Blocks; 
+        string[] Blocks;
+
+        Assembly sam = Assembly.GetExecutingAssembly();
 
         public Form1()
         {
@@ -28,13 +31,14 @@ namespace PrakRab_07
 
         private void button1_Click(object sender, EventArgs e)
         {
+            
             if (textBox1.Text.Length > 0)
             {
                 string s = "";
 
                 string key = textBox1.Text;
 
-                StreamReader sr = new StreamReader(@"D:\Visual_Studio_Projects\akset045\32_InSe_PrakRab_07\PrakRab_07\Resources\TextFile1.txt");
+                StreamReader sr = new StreamReader(sam.GetManifestResourceStream("PrakRab_07.Resources.TextFile1.txt"));
 
                 while (!sr.EndOfStream)
                 {
@@ -68,11 +72,11 @@ namespace PrakRab_07
                 for (int i = 0; i < Blocks.Length; i++)
                         result += Blocks[i];
 
-                StreamWriter sw = new StreamWriter(@"D:\Visual_Studio_Projects\akset045\32_InSe_PrakRab_07\PrakRab_07\Resources\TextFile2.txt");
+                StreamWriter sw = new StreamWriter(sam.GetManifestResourceStream("PrakRab_07.Resources.TextFile2.txt"));
                 sw.WriteLine(StringFromBinaryToNormalFormat(result));
                 sw.Close();
 
-                Process.Start(@"D:\Visual_Studio_Projects\akset045\32_InSe_PrakRab_07\PrakRab_07\Resources\TextFile2.txt");
+                Process.Start("PrakRab_07.Resources.TextFile2.txt");
             }
             else
                 MessageBox.Show("Введите ключевое слово!");
@@ -86,7 +90,7 @@ namespace PrakRab_07
 
                 string key = StringToBinaryFormat(textBox2.Text);
 
-                StreamReader sr = new StreamReader(@"D:\Visual_Studio_Projects\akset045\32_InSe_PrakRab_07\PrakRab_07\Resources\TextFile2.txt");
+                StreamReader sr = new StreamReader(sam.GetManifestResourceStream("PrakRab_07.Resources.TextFile2.txt"));
 
                 while (!sr.EndOfStream)
                 {
@@ -116,11 +120,11 @@ namespace PrakRab_07
                 for (int i = 0; i < Blocks.Length; i++)
                     result += Blocks[i];
 
-                StreamWriter sw = new StreamWriter(@"D:\Visual_Studio_Projects\akset045\32_InSe_PrakRab_07\PrakRab_07\Resources\TextFile3.txt");
+                StreamWriter sw = new StreamWriter(sam.GetManifestResourceStream("PrakRab_07.Resources.TextFile3.txt"));
                 sw.WriteLine(StringFromBinaryToNormalFormat(result));
                 sw.Close();
 
-                Process.Start(@"D:\Visual_Studio_Projects\akset045\32_InSe_PrakRab_07\PrakRab_07\Resources\TextFile3.txt");
+                Process.Start("PrakRab_07.Resources.TextFile3.txt");
             }
             else
                 MessageBox.Show("Введите ключевое слово!");
