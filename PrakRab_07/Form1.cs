@@ -219,7 +219,6 @@ namespace PrakRab_07
 
                 output += ((char)a).ToString();
             }
-
             return output;
         }
     }
