@@ -72,7 +72,7 @@ namespace PrakRab_07
                 for (int i = 0; i < Blocks.Length; i++)
                         result += Blocks[i];
 
-                StreamWriter sw = new StreamWriter(sam.GetManifestResourceStream("PrakRab_07.Resources.TextFile2.txt"));
+                StreamWriter sw = new StreamWriter(ResourceLocation "\\TextFile2.txt\\");
                 sw.WriteLine(StringFromBinaryToNormalFormat(result));
                 sw.Close();
 
@@ -120,7 +120,7 @@ namespace PrakRab_07
                 for (int i = 0; i < Blocks.Length; i++)
                     result += Blocks[i];
 
-                StreamWriter sw = new StreamWriter(sam.GetManifestResourceStream("PrakRab_07.Resources.TextFile3.txt"));
+                StreamWriter sw = new StreamWriter("PrakRab_07.Resources.TextFile3.txt");
                 sw.WriteLine(StringFromBinaryToNormalFormat(result));
                 sw.Close();
 
