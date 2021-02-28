@@ -76,7 +76,7 @@ namespace PrakRab_07
                 sw.WriteLine(StringFromBinaryToNormalFormat(result));
   //              sw.Close();
 
-                Process.Start("Resources.TextFile2.txt");
+                Process.Start("TextFile2.txt");
             }
             else
                 MessageBox.Show("Введите ключевое слово!");
