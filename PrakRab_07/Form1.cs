@@ -28,11 +28,11 @@ namespace PrakRab_07
 
         private void button1_Click(object sender, EventArgs e)
         {
-            if (textBoxEncodeKeyWord.Text.Length > 0)
+            if (textBox1.Text.Length > 0)
             {
                 string s = "";
 
-                string key = textBoxEncodeKeyWord.Text;
+                string key = textBox1.Text;
 
                 StreamReader sr = new StreamReader(@"D:\Visual_Studio_Projects\akset045\32_InSe_PrakRab_07\PrakRab_07\Resources\TextFile1.txt");
 
@@ -48,7 +48,7 @@ namespace PrakRab_07
                 CutStringIntoBlocks(s);
 
                 key = CorrectKeyWord(key, s.Length / (2 * Blocks.Length));
-                textBoxEncodeKeyWord.Text = key;
+                textBox1.Text = key;
                 key = StringToBinaryFormat(key);
 
                 for (int j = 0; j < quantityOfRounds; j++)
@@ -109,7 +109,7 @@ namespace PrakRab_07
 
                 key = KeyToNextRound(key);
 
-                textBoxEncodeKeyWord.Text = StringFromBinaryToNormalFormat(key);
+                textBox1.Text = StringFromBinaryToNormalFormat(key);
 
                 string result = "";
 
